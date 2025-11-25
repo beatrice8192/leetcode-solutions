@@ -12,8 +12,8 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: bool
         """
-        fast = head # 2 steps per turn
         slow = head # 1 step per turn, while reversing the list
+        fast = head # 2 steps per turn
         last1 = None
         last2 = None
         n = 0
