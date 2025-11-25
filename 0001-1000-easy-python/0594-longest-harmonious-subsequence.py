@@ -7,14 +7,14 @@ class Solution(object):
         :rtype: int
         """
         result = 0
-        map = {}
+        _map = {}
         for n in nums:
-            if (n not in map):
-                map[n] = 0
-            map[n] += 1
-        keys = sorted(map.keys())
+            if (n not in _map):
+                _map[n] = 0
+            _map[n] += 1
+        keys = sorted(_map.keys())
         for i in range(1, len(keys)):
             if (keys[i-1] + 1 == keys[i]):
-                result = max(result, map[keys[i-1]] + map[keys[i]])
+                result = max(result, _map[keys[i-1]] + _map[keys[i]])
         return result
 

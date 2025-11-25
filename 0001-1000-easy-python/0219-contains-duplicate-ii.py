@@ -7,11 +7,11 @@ class Solution(object):
         :type k: int
         :rtype: bool
         """
-        map = {}
+        _map = {}
         for i in range(len(nums)):
-            if (nums[i] in map and i - map[nums[i]] <= k):
+            if (nums[i] in _map and i - _map[nums[i]] <= k):
                 return True
             else:
-                map[nums[i]] = i
+                _map[nums[i]] = i
         return False
 

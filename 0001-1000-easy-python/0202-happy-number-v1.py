@@ -6,20 +6,20 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        map = {}
+        _map = {}
         while (n != 1):
-            sum = self.getSquareSum(n)
-            if (n in map):
+            _sum = self.getSquareSum(n)
+            if (n in _map):
                 return False
             else:
-                map[n] = sum
-            n = sum
+                _map[n] = _sum
+            n = _sum
         return True
 
     # def getSquareSum(self, n: int) -> int:
     def getSquareSum(self, n):
-        sum = 0
+        _sum = 0
         while (n > 0):
-            sum += (n % 10) ** 2
+            _sum += (n % 10) ** 2
             n = int(n / 10)
-        return sum
+        return _sum

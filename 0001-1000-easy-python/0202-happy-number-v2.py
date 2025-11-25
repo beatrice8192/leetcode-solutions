@@ -26,8 +26,8 @@ class Solution(object):
 
     # def getSquareSum(self, n: int) -> int:
     def getSquareSum(self, n):
-        sum = 0
+        _sum = 0
         while (n > 0):
-            sum += (n % 10) ** 2
+            _sum += (n % 10) ** 2
             n = int(n / 10)
-        return sum
+        return _sum

@@ -7,14 +7,14 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
-        map = {}
+        _map = {}
         for char in s:
-            if (char not in map):
-                map[char] = 0
-            map[char] += 1
+            if (char not in _map):
+                _map[char] = 0
+            _map[char] += 1
         for char in t:
-            if (char not in map or map[char] == 0):
+            if (char not in _map or _map[char] == 0):
                 return char
-            map[char] -= 1
+            _map[char] -= 1
         return None
 

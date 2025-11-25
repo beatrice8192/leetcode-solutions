@@ -22,14 +22,14 @@ class Solution(object):
         :type num: int
         :rtype: bool
         """
-        sum = 1
+        _sum = 1
         sqrt = int(ceil(num ** 0.5))
         if (sqrt ** 2 == num):
-            sum += sqrt
+            _sum += sqrt
         for i in range(2, sqrt):
             if (num % i == 0):
-                sum += i + int(num / i)
-            if (sum > num):
+                _sum += i + int(num / i)
+            if (_sum > num):
                 return False
-        return sum == num
+        return _sum == num
 

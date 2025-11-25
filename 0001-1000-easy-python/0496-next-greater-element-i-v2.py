@@ -7,12 +7,12 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        map = {}
+        _map = {}
         stack = []
         for n in reversed(nums2):
             while (stack and stack[-1] <= n):
                 stack.pop()
-            map[n] = stack[-1] if stack else -1
+            _map[n] = stack[-1] if stack else -1
             stack.append(n)
-        return [map[n] for n in nums1]
+        return [_map[n] for n in nums1]
 

@@ -7,10 +7,10 @@ class Solution(object):
         :rtype: List[str]
         """
         medals = ["Gold Medal","Silver Medal","Bronze Medal"]
-        map = {}
+        _map = {}
         rank = len(score)
         for s in sorted(score):
-            map[s] = rank
+            _map[s] = rank
             rank -= 1
-        return [(str(map[x]) if map[x] > 3 else medals[map[x] - 1]) for x in score]
+        return [(str(_map[x]) if _map[x] > 3 else medals[_map[x] - 1]) for x in score]
 

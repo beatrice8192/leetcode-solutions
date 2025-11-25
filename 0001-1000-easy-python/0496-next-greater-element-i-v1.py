@@ -7,12 +7,12 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        map = {nums2[-1]: -1}
+        _map = {nums2[-1]: -1}
         for i in range(len(nums2) - 1):
-            map[nums2[i]] = -1
+            _map[nums2[i]] = -1
             for j in range(i + 1, len(nums2)):
                 if (nums2[j] > nums2[i]):
-                    map[nums2[i]] = nums2[j]
+                    _map[nums2[i]] = nums2[j]
                     break
-        return [map[n] for n in nums1]
+        return [_map[n] for n in nums1]
 

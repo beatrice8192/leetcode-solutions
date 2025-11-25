@@ -7,15 +7,15 @@ class Solution(object):
         :rtype: int
         """
         result = 0
-        map = {}
+        _map = {}
         hasOdd = False
         for char in s:
-            if (char not in map):
-                map[char] = 0
-            map[char] += 1
-        for char in map.keys():
-            if (map[char] % 2 == 1):
+            if (char not in _map):
+                _map[char] = 0
+            _map[char] += 1
+        for char in _map.keys():
+            if (_map[char] % 2 == 1):
                 hasOdd = True
-            result += int(map[char] / 2) * 2
+            result += int(_map[char] / 2) * 2
         return result + (1 if (hasOdd) else 0)
 

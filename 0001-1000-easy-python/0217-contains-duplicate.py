@@ -6,11 +6,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        map = {}
+        _map = {}
         for n in nums:
-            if (n in map):
+            if (n in _map):
                 return True
             else:
-                map[n] = True
+                _map[n] = True
         return False
 
