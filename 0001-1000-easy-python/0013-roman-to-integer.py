@@ -17,13 +17,13 @@ class Solution(object):
         }
         result = 0
         unit = 0
-        unit_max = 0
+        max_unit = 0
         for i in reversed(range(len(s))):
             unit = units[s[i]]
-            if (unit < unit_max):
+            if (unit < max_unit):
                 result -= unit
             else:
-                unit_max = unit
+                max_unit = unit
                 result += unit
         return result
 
