@@ -14,7 +14,7 @@ class Solution(object):
         :type val: int
         :rtype: Optional[TreeNode]
         """
-        if (not root):
+        if (root == None):
             return None
         elif (val == root.val):
             return root

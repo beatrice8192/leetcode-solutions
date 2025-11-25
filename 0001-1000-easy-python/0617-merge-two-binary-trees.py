@@ -14,9 +14,9 @@ class Solution(object):
         :type root2: Optional[TreeNode]
         :rtype: Optional[TreeNode]
         """
-        if (not root1):
+        if (root1 == None):
             return root2
-        if (not root2):
+        if (root2 == None):
             return root1
         root1.val += root2.val
         root1.left = self.mergeTrees(root1.left, root2.left)

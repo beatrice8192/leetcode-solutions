@@ -16,7 +16,7 @@ class Solution(object):
         """
         def dfs(root, leaves):
             if (root):
-                if (not root.left and not root.right):
+                if (root.left == None and root.right == None):
                     leaves.append(root.val)
                 else:
                     dfs(root.left, leaves)

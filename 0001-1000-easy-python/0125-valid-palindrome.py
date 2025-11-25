@@ -6,20 +6,20 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        left = 0
-        right = len(s) - 1
-        while (left < right):
-            while (not s[left].isalnum()): # not alpha-numeric
-                left += 1
-                if (left == len(s)):
+        start = 0
+        end = len(s) - 1
+        while (start < end):
+            while (not s[start].isalnum()): # not alpha-numeric
+                start += 1
+                if (start == len(s)):
                     return True
-            while (not s[right].isalnum()): # not alpha-numeric
-                right -= 1
-                if (right == 0):
+            while (not s[end].isalnum()): # not alpha-numeric
+                end -= 1
+                if (end == 0):
                     return True
-            if (s[left].lower() != s[right].lower()):
+            if (s[start].lower() != s[end].lower()):
                 return False
-            left += 1
-            right -= 1
+            start += 1
+            end -= 1
         return True
 

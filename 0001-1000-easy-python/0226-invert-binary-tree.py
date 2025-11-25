@@ -13,7 +13,7 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: Optional[TreeNode]
         """
-        if root == None:
+        if (root == None):
             return None
         else:
             self.invertTree(root.left)
