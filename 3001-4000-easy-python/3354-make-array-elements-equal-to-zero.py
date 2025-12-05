@@ -7,15 +7,15 @@ class Solution(object):
         :rtype: int
         """
         count = 0
-        left_sum = 0
         total_sum = sum(nums)
+        prefix_sum = 0
         for i in range(len(nums)):
-            left_sum += nums[i]
-            if (left_sum * 2 < total_sum - 1):
+            prefix_sum += nums[i]
+            if (prefix_sum * 2 < total_sum - 1):
                 continue
-            elif (left_sum * 2 > total_sum + 1):
+            elif (prefix_sum * 2 > total_sum + 1):
                 break
             elif (nums[i] == 0):
-                count += 2 if (left_sum * 2 == total_sum) else 1
+                count += 2 if (prefix_sum * 2 == total_sum) else 1
         return count
 

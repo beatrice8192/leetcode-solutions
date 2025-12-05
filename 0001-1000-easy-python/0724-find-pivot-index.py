@@ -7,11 +7,11 @@ class Solution(object):
         :rtype: int
         """
         total_sum = sum(nums)
-        left_sum = 0
+        prefix_sum = 0
         for i in range(len(nums)):
             if (i > 0):
-                left_sum += nums[i-1]
-            if (left_sum * 2 + nums[i] == total_sum):
+                prefix_sum += nums[i-1]
+            if (prefix_sum * 2 + nums[i] == total_sum):
                 return i
         return -1
 
